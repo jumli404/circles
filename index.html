@@ -5,16 +5,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="scrpit.js"></script>
-    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js"></script>
 </head>
+
 
 <body>
     <p id="hm"></p>
     <p id="h"></p>
-    <canvas>
+    <canvas></canvas>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+        }
 
-    </canvas>
+        p {
+            position: absolute;
+            color: white;
+            margin: 10px;
+        }
+
+        #h {
+            margin: 50px;
+        }
+
+        canvas {
+            position: absolute;
+            border: 1px solid red;
+
+
+        }
+    </style>
+    <script>
+        alert("thsi")
+
+
+var a = document.getElementById('hm')
+var b = document.getElementById('h')
+var c = 0
+var canvas = document.getElementsByTagName('canvas')[0]
+canvas.width = window.innerWidth
+canvas.height = window.innerHeight
+var d = canvas.getContext('2d')
+
+var x
+var y;
+var r = 50
+
+function as() {
+    addEventListener('mousemove', (event) => {
+        a.innerHTML = x
+        b.innerHTML = y
+        x = event.x
+        y = event.y
+
+
+    })
+
+    d.beginPath()
+    d.arc(x, y, r, Math.PI * 2, false)
+    d.strokeStyle = 'red'
+    d.stroke()
+    requestAnimationFrame(as)
+}
+
+as()
+    </script>
+
+
 </body>
 
 </html>
