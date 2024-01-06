@@ -1,7 +1,7 @@
  var a = document.getElementById('hm')
-        var b = document.getElementById('h')
-        var c = 0
-        var canvas = document.getElementsByTagName('canvas')[0]
+ var b = document.getElementById('h')
+ var c = 0
+ var canvas = document.getElementsByTagName('canvas')[0]
         canvas.width = innerWidth
         canvas.height = innerHeight
         var d = canvas.getContext('2d')
